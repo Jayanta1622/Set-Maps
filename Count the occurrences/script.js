@@ -1,5 +1,16 @@
-let input = "d s f f wf w wf w w zc g wf g d g rfd vgh t ddg t e ft f t etf r e r";
-
-let output = input.map((word,i) => {
+function countWords(text) {
+    const wordCounts = {};
+    const words = text.toLowerCase().split(' ');
     
-})
+    for (let i = 0; i < words.length; i++) {
+      const word = words[i];
+      if (!wordCounts[word]) {
+        wordCounts[word] = 1;
+      } else {
+        wordCounts[word]++;
+      }
+    }
+    
+    return wordCounts;
+  }
+  console.log(countWords(text));
